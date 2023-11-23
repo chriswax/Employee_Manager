@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "281e67a6-21aa-4b1b-8aaf-5ff33a797015",
+		"name": "Henry_Class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24151545"
+	},
+	"item": [
+		{
+			"name": "EmployeeManager",
+			"item": [
+				{
+					"name": "GetAllEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7133/api/v1/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7133",
+							"path": [
+								"api",
+								"v1",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmployeeById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidXNlciIsImp0aSI6IjUwOTFjZjllLWU5M2UtNDY3Yy04MjM1LTk2NjU4YWRhYWMwZiIsImV4cCI6MTcwMDc3NTAzNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDA0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzOTUifQ.FEid7oj3SxpJOsxrTtKzTUpgKICPGuZuWmXSVAvy1wY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7133/api/v1/Employee/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7133",
+							"path": [
+								"api",
+								"v1",
+								"Employee",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"user@example.com\",\r\n  \"dateOfEmployement\": \"2023-11-21T12:07:07.504Z\",\r\n  \"dateOfBirth\": \"2023-11-21T12:07:07.504Z\",\r\n  \"position\": \"string\",\r\n  \"department\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"address\": \"string\",\r\n  \"city\": \"string\",\r\n  \"state\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7133/api/v1/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7133",
+							"path": [
+								"api",
+								"v1",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateEmployee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidXNlciIsImp0aSI6IjUwOTFjZjllLWU5M2UtNDY3Yy04MjM1LTk2NjU4YWRhYWMwZiIsImV4cCI6MTcwMDc3NTAzNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDA0IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzOTUifQ.FEid7oj3SxpJOsxrTtKzTUpgKICPGuZuWmXSVAvy1wY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 13,\r\n        \"firstName\": \"string123\",\r\n        \"lastName\": \"string\",\r\n        \"email\": \"user@example.com\",\r\n        \"dateOfEmployement\": \"2023-11-21T12:07:07.504\",\r\n        \"dateOfBirth\": \"2023-11-21T12:07:07.504\",\r\n        \"position\": \"string\",\r\n        \"department\": \"string\",\r\n        \"phoneNumber\": \"string\",\r\n        \"address\": \"string\",\r\n        \"city\": \"string\",\r\n        \"state\": \"string\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7133/api/v1/Employee/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7133",
+							"path": [
+								"api",
+								"v1",
+								"Employee",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7133/api/v1/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7133",
+							"path": [
+								"api",
+								"v1",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
