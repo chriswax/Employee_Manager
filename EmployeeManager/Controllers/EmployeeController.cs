@@ -35,13 +35,21 @@ namespace EmployeeManager.Controllers
             return Ok(record);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddEmployee([FromBody] Employee employee)
-        {
-            await employeeService.AddEmployeeAsync(employee);
-            return CreatedAtAction("GetEmployee", new { id = employee.Id }, employee);
-        }
+          [HttpPost]
+   public async Task<IActionResult> AddEmployee([FromBody] Employee employee)
+   {
+       try
+       {
+           await employeeService.AddEmployeeAsync(employee);
 
+           return Ok(employee);
+       }
+       catch (Exception ex)
+       {
+           Console.Error.WriteLine($"An error occurred: {ex.Message}");
+           return StatusCode(500, new { Message = "An error occurred while processing the request." });
+       }
+   }
       
 
 
